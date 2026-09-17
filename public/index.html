@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="%PUBLIC_URL%/fluid-cursor.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        try {
+          new FluidCursor({
+            SIM_RESOLUTION: 128,
+            DYE_RESOLUTION: 1200,
+            CAPTURE_RESOLUTION: 512,
+            DENSITY_DISSIPATION: 3.2,
+            VELOCITY_DISSIPATION: 2.2,
+            PRESSURE: 0.08,
+            PRESSURE_ITERATIONS: 20,
+            CURL: 2.5,
+            SPLAT_RADIUS: 0.22,
+            SPLAT_FORCE: 6500,
+            SHADING: true,
+            COLOR_UPDATE_SPEED: 10,
+            TRANSPARENT: true,
+          });
+        } catch (error) {
+          console.error("Fluid Cursor failed to initialize:", error);
+        }
+      });
+    </script>
+  </body>
+</html>
