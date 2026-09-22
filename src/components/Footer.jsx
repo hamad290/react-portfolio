@@ -2,10 +2,10 @@ import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const socials = [
-  { href: "https://github.com/", icon: FaGithub, label: "GitHub" },
-  { href: "https://linkedin.com/", icon: FaLinkedin, label: "LinkedIn" },
+  { href: "https://github.com/hamad290", icon: FaGithub, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/hammad-ur-rehman-544095198/", icon: FaLinkedin, label: "LinkedIn" },
   { href: "https://twitter.com/", icon: FaXTwitter, label: "Twitter" },
-  { href: "mailto:hello@example.com", icon: Mail, label: "Email" },
+  { href: "mailto:hamad290k@gmail.com", icon: Mail, label: "Email" },
 ];
 
 export default function Footer() {

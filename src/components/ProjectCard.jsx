@@ -1,9 +1,10 @@
-import { ExternalLink } from "lucide-react";
+import { FileText } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
-  const { tag, title, description, tech = [], image, liveUrl, repoUrl } = project;
-
+  const { tag, title, description, tech = [], image, repoUrl } = project;
+  const githubUrl = repoUrl || "https://github.com/hamad290";
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-xl bg-white/60 text-black shadow-sm transition-shadow hover:shadow-lg dark:bg-slate-900/60 dark:text-white">
       <div className="relative z-10 flex flex-1 flex-col">
@@ -38,30 +39,27 @@ export default function ProjectCard({ project }) {
               ))}
             </div>
           )}
-          {(liveUrl || repoUrl) && (
-            <div className="flex items-center gap-4">
-              {liveUrl && (
+          <div className="flex flex-wrap items-center gap-2">
+              {githubUrl ? (
                 <a
-                  href={liveUrl}
+                  href={githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-800 transition-colors hover:border-accent hover:text-accent dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
                 >
-                  Live <ExternalLink className="h-3.5 w-3.5" />
+                  <FaGithub className="h-4 w-4" />
+                  GitHub
                 </a>
-              )}
-              {repoUrl && (
-                <a
-                  href={repoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-semibold hover:underline"
-                >
-                  Code <FaGithub className="h-3.5 w-3.5" />
-                </a>
-              )}
+              ) : null}
+              <Link
+                to={`/projects/${project.slug || project.id}`}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-800 transition-colors hover:border-accent hover:text-accent dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+                aria-label={`View details for ${title}`}
+              >
+                <FileText className="h-4 w-4" />
+                Details
+              </Link>
             </div>
-          )}
         </div>
       </div>
 

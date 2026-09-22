@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-
+import hamad from "../images/hamad.jpg";
 export default function About() {
   return (
     <section className="container-page py-16 lg:py-24">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
         {/* Profile Image Section */}
-        <div className="order-2 lg:order-1 rounded-xl overflow-hidden shadow-lg">
-          <div className="aspect-square w-full bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-900 dark:to-blue-700 flex items-center justify-center text-white text-lg font-semibold">
-            Your Photo
+        <div className="order-2 lg:order-1 flex justify-center rounded-xl overflow-hidden shadow-lg ring-1 ring-slate-200 dark:ring-slate-700">
+          <div className="aspect-square w-[88%] bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-900 dark:to-blue-700 flex items-center justify-center overflow-hidden rounded-xl">
+            <img
+              src={hamad}
+              alt="Hammad Ur Rehman"
+              className="h-full w-full object-contain object-center bg-white/80 dark:bg-slate-900/80"
+            />
           </div>
         </div>
 

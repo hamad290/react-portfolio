@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import heroImage from "../images/hero section.jpg";
 import services from "../data/services";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import ProjectGallery from "../components/ProjectGallery";
 import SkillsOrbit from "../components/SkillsOrbit";
 
 const socials = [
-  { href: "https://github.com/", icon: FaGithub, label: "GitHub" },
-  { href: "https://linkedin.com/", icon: FaLinkedin, label: "LinkedIn" },
-  { href: "https://twitter.com/", icon: FaXTwitter, label: "Twitter / X" },
+  { href: "https://github.com/hamad290", icon: FaGithub, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/hammad-ur-rehman-544095198/", icon: FaLinkedin, label: "LinkedIn" },
+  { href: "https://twitter.com/hamad290", icon: FaXTwitter, label: "Twitter / X" },
 ];
 
-const rotatingRoles = ["JavaScript", "React", "Next.js", "Node.js"];
+const rotatingRoles = ["WordPress developer", "Front-End developer","Back-End developer", "Full-Stack developer", "MERN Stack developer", "React.js developer", "Next.js developer","SEO Specialist",];
 
 function AnimatedRole() {
   const [index, setIndex] = useState(0);
@@ -45,6 +46,8 @@ function AnimatedRole() {
 }
 
 export default function Home() {
+  const [visibleProjectCount, setVisibleProjectCount] = useState(6);
+
   return (
     <>
       {/* Hero */}
@@ -62,26 +65,20 @@ export default function Home() {
           </h1>
 
           <h2 className="mb-6 flex flex-row flex-wrap items-center gap-2 text-lg font-semibold text-slate-700 dark:text-slate-300 md:text-2xl">
-            <span>I am a Web App Developer in</span>
+            <span>I'm a</span>
             <AnimatedRole />
           </h2>
 
           <p className="max-w-2xl text-base md:text-lg text-slate-600 dark:text-slate-400 mb-8 space-y-3">
-            Welcome to my portfolio! I hope you enjoy your visit. I specialize
-            in Web development and Site SEO, Front-End development with
-            React.js. I have worked on various projects, including a Real{" "}
-            <span className="text-accent font-medium">Link-Shortener</span>,
-            E-Commerce APIs,{" "}
-            <span className="text-accent font-medium">React-based</span>{" "}
-            Website Design and Development, and more.
-            <br />
-            <br />
-            I am passionate about learning new technologies and building
-            solutions that make a difference. Thank you for visiting my
-            portfolio! I hope you like my work.{" "}
-            <span className="text-amber-500 font-semibold">
-              Happy coding! 🎉💻
-            </span>
+          I’m a full-stack developer specializing in Node.js and React.js. 
+          I’ve built projects like Learning Management Systems, 
+          E-Commerce platforms, Food Catering websites, Traditional 
+          Architecture sites, Medication Management Systems, and more.
+           Using React.js, Next.js, Tailwind CSS, MongoDB, Laravel PHP 
+           I create fast, scalable, and user-friendly applications. 
+           I’m passionate about learning new technologies and building 
+           solutions that make a difference. Explore my work and see how 
+           I turn ideas into reality. Happy coding!
           </p>
 
           <div className="flex items-center gap-5 mb-8">
@@ -101,7 +98,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/12A05g8dnXN9Xtuxk_TyLiAwHGe6y_Hd7/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="group relative z-0 inline-flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white shadow-2xl transition-transform duration-300 ease-in-out active:translate-y-px [background:var(--bg)] [border-radius:100px] [--bg:#0f172a] [--cut:0.05em] [--radius:100px] [--shimmer-color:#ffffff] [--speed:3s] [--spread:90deg]"
@@ -139,8 +136,12 @@ export default function Home() {
 
       {/* Hero image */}
       <section className="container-page pb-20">
-        <div className="aspect-[21/9] w-full rounded-xl bg-slate-300 dark:bg-slate-700 flex items-center justify-center text-slate-500">
-          Your hero image here
+        <div className="overflow-hidden rounded-xl border border-slate-200/70 bg-slate-100 shadow-lg dark:border-slate-700 dark:bg-slate-800">
+          <img
+            src={heroImage}
+            alt="Hammad Ur Rehman hero"
+            className="block h-auto w-full object-contain"
+          />
         </div>
       </section>
 
@@ -152,7 +153,7 @@ export default function Home() {
               Skills &amp; Services
             </h2>
             <p className="mt-4 text-base leading-relaxed">
-              These are my working Skills &amp; Services I have done.
+              Here are the skills I specialize in and the services I provide to help bring your ideas to life.
             </p>
           </div>
 
@@ -160,11 +161,22 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.name}
-                className="group relative flex size-full overflow-hidden rounded-xl bg-slate-100 text-black dark:bg-slate-900 dark:text-white"
+                className="service-card group relative flex size-full overflow-hidden rounded-xl bg-slate-100 text-black dark:bg-slate-900 dark:text-white"
+                onMouseMove={(event) => {
+                  const bounds = event.currentTarget.getBoundingClientRect();
+                  event.currentTarget.style.setProperty(
+                    "--pointer-x",
+                    `${event.clientX - bounds.left}px`,
+                  );
+                  event.currentTarget.style.setProperty(
+                    "--pointer-y",
+                    `${event.clientY - bounds.top}px`,
+                  );
+                }}
               >
                 <div className="relative z-10 w-full">
                   <div className="w-full rounded-lg p-5">
-                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full">
+                    <div className="service-logo mx-auto flex h-20 w-20 items-center justify-center rounded-2xl">
                       <img src={service.icon} alt={service.name} className="h-16 w-16 object-contain" />
                     </div>
                     <h3 className="mt-8 text-lg font-semibold">{service.name}</h3>
@@ -207,17 +219,19 @@ export default function Home() {
           </span>
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mb-10">
-          Here are some of my projects I have done.
+          Showcasing some of my completed projects — along with many others I’ve had the pleasure of working on.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-left">
-          {projects.map((project) => (
+          {projects.slice(0, visibleProjectCount).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        <Link
-          to="/projects"
+        {visibleProjectCount < projects.length && (
+        <button
+          type="button"
+          onClick={() => setVisibleProjectCount((count) => count + 3)}
           className="group relative z-0 mt-10 inline-flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white shadow-2xl transition-transform duration-300 ease-in-out active:translate-y-px [background:var(--bg)] [border-radius:100px] [--bg:#0f172a] [--cut:0.05em] [--radius:100px] [--shimmer-color:#ffffff] [--speed:3s] [--spread:90deg]"
           style={{
             background: "#0f172a",
@@ -235,11 +249,16 @@ export default function Home() {
           </span>
           <div className="absolute inset-0 rounded-[inherit] px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f] transition-all duration-300 ease-in-out group-hover:shadow-[inset_0_-6px_10px_#ffffff3f] group-active:shadow-[inset_0_-10px_10px_#ffffff3f]" />
           <div className="absolute -z-20 [background:var(--bg)] [border-radius:var(--radius)] [inset:var(--cut)]" />
-        </Link>
+        </button>
+        )}
       </section>
 
+     
+
+      <ProjectGallery projects={projects} />
+
       {/* Hire me CTA */}
-      <section className="container-page pb-24 text-center">
+      <section className="container-page pb-24 pt-24 text-center">
         <h2 className="mb-3 text-2xl font-bold md:text-3xl">
           Hire me to build your{" "}
           <span className="animated-gradient-text">Next Project!</span>

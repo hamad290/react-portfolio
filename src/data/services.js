@@ -19,6 +19,26 @@ const services = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     description: "MongoDB for Backend API's Database Management.",
   },
+  {
+    name: "WordPress",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg",
+    description: "WordPress websites, themes, and custom functionality.",
+  },
+  {
+    name: "Redux",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+    description: "Redux for predictable state management in React applications.",
+  },
+  {
+    name: "Laravel PHP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+    description: "Laravel PHP for robust backend and web application development.",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    description: "Tailwind CSS for responsive and modern user interfaces.",
+  },
 ];
 
 export default services;

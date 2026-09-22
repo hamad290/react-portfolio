@@ -3,8 +3,8 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const initialForm = { firstName: "", lastName: "", email: "", phone: "", message: "" };
 const contactEmail = "hamad290k@gmail.com";
-const contactPhone = "+92 300 0000000";
-const locationText = "Islamabad, Pakistan";
+const contactPhone = "+974 5109 8773";
+const locationText = "Doha, Qatar";
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
@@ -92,7 +92,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="contact-form space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm font-medium text-slate-700 dark:text-slate-200" htmlFor="firstName">
