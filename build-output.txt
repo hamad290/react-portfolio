@@ -1,6 +1,6 @@
 npm notice run react-portfolio@0.1.0 build
-npm notice run react-scripts build
-(node:14172) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+npm notice run react-scripts build ; echo EXIT:0; type build-output.txt
+(node:6076) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Creating an optimized production build...
 Compiled successfully.

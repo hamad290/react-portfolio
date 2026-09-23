@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Hero image */}
-      <section className="container-page pb-20">
+      <section className="container-page pb-2 sm:pb-10 lg:pb-20">
         <div className="overflow-hidden rounded-xl border border-slate-200/70 bg-slate-100 shadow-lg dark:border-slate-700 dark:bg-slate-800">
           <img
             src={heroImage}
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Skills & Services */}
-      <section className="w-full bg-gray-300/20 py-20 dark:bg-slate-900/30">
+      <section className="w-full bg-gray-300/20 py-10 sm:py-16 lg:py-20 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="bg-gradient-to-r from-fuchsia-500 from-10% via-violet-500 via-30% to-sky-500 to-90% bg-clip-text text-3xl font-bold leading-tight text-transparent sm:text-4xl lg:text-5xl">

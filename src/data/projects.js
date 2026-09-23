@@ -50,7 +50,7 @@ const projects = [
     title: "Cut To Black Prize - Screenwriting Contests",
     description:
       "Cut to Black Prize is a curated screenwriting competition with a strong craft-focused concept and a premium submission experience.",
-    tech: ["React", "TypeScript", "Vite"],
+    tech: ["React", "TypeScript"],
     image: project2,
     details: {
       features: [
@@ -85,7 +85,7 @@ const projects = [
     title: "Full Stack Portfolio Website Prisma",
     description:
       "A dynamic portfolio website built for content management, SEO, and scalable project showcasing.",
-    tech: ["Next.js", "React"],
+    tech: ["Next.js", "Laravel", "Tailwind CSS"],
     image: project3,
     details: {
       features: [
@@ -95,7 +95,7 @@ const projects = [
         "Admin-ready data handling",
       ],
       highlights:
-        "Next.js, React, and a database-backed content model create a flexible portfolio architecture.",
+        "Next.js, Laravel, and a database-backed content model create a flexible portfolio architecture.",
       about: "Designed to make portfolio updates fast and easy without a full redesign.",
       gettingStarted: "Set up the project dependencies and run the development server.",
       prerequisites: ["Node.js 18 or newer", "Package manager"],
@@ -120,7 +120,7 @@ const projects = [
     title: "CareerForge AI",
     description:
       "An AI-powered career assistant for portfolio building, job-fit analysis, and guided professional growth.",
-    tech: ["Next.js", "MongoDB", "Prisma"],
+    tech: ["Next.js", "MongoDB", "Tailwind CSS"],
     image: project4,
     details: {
       features: [
