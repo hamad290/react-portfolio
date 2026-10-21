@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import heroImage from "../images/hero section.jpg";
+import resumeFile from "../cv/Resume Hammad_Ur_Rehman.pdf";
 import services from "../data/services";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
@@ -98,7 +99,7 @@ export default function Home() {
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <a
-              href="https://drive.google.com/file/d/1RFiSiOaUCv1MWLyMIRotHdpB9kDBhzdE/view?usp=sharing"
+              href={resumeFile}
               target="_blank"
               rel="noreferrer"
               className="group relative z-0 inline-flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white shadow-2xl transition-transform duration-300 ease-in-out active:translate-y-px [background:var(--bg)] [border-radius:100px] [--bg:#0f172a] [--cut:0.05em] [--radius:100px] [--shimmer-color:#ffffff] [--speed:3s] [--spread:90deg]"
