@@ -27,8 +27,7 @@ export default function About() {
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 Hammad Ur Rehman
               </span>
-              , a passionate Web Application Developer based in Islamabad,
-              Pakistan. I began my journey into web development with a passion for creating dynamic, responsive digital experiences. Currently, I continue to enhance my skills in both front-end and back-end technologies.
+              , a passionate Web Application Developer based in Doha, Qatar. I began my journey into web development with a passion for creating dynamic, responsive digital experiences. Currently, I continue to enhance my skills in both front-end and back-end technologies.
             </p>
             
             <p>
